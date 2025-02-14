@@ -1,7 +1,7 @@
 # Glory
 My first repository<br>
 -sahil<br>
-
+```c
 //wap to store info about the college students,teachers,staff
 #include<stdio.h>
 #include<string.h>
@@ -250,3 +250,5 @@ void viewstudents(){
         students[i].maths, students[i].cpp, students[i].webdesign, students[i].java, students[i].dbms);
     }
 }
+
+```c
