@@ -86,6 +86,17 @@ void addstudent(){
                 printf("Invalid input. Name cannot be empty.\n");
                 continue;
             }
+            int is_empty=1;
+            for (int i = 0 ; students[studentcount].name[i] != '\0' ; i++){
+                if(students[studentcount].name[i] != ' '){
+                    is_empty = 0;
+                    break;
+                }
+            }
+            if (is_empty==1){
+                printf("\nInvalid Input . Try again\n");
+                continue;
+            }
             int valid=1;
             for (int i = 0; students[studentcount].name[i] != '\0'; i++) {  
                  if (!((students[studentcount].name[i] >= 'A' && students[studentcount].name[i] <= 'Z') ||
