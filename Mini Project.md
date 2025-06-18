@@ -1,4 +1,4 @@
-# College Managment Program(CMS);\
+# College Managment Program(CMP);
 ```cpp
 #include<iostream>
 using namespace std;
