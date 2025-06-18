@@ -7,7 +7,7 @@ class student{
     private: 
         int roll_no;
         string name;
-        int dob;
+        string dob;
         string course;
         string gender;
 
@@ -34,8 +34,8 @@ class student{
                 }
             }
             cout<< "Enter Date of birth of the student : ";
-            cin>> dob;
-            cin.ignore(); // clear leftover newline from dob input
+            getline(cin, dob);
+
             while (true) {
                 cout << "Enter gender (Male/Female/Other - case sensitive): ";
                 getline(cin, gender);
