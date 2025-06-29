@@ -1,5 +1,3 @@
-# College Managment Program(CMP);
-```cpp
 #include<iostream>
 #include<iomanip>
 using namespace std;
@@ -27,8 +25,21 @@ public:
             cin.ignore(10000, '\n');
         }
         cin.ignore();
-        cout << "Enter Name: ";
-        getline(cin, name);
+        do {
+            cout << "Enter Name: ";
+            getline(cin, name);
+            if (name.empty()) {
+                cout << "Name cannot be empty. Please try again.\n";
+            }
+        } while (name.empty());
+        for (int i = 0; i < name.length(); i++) {
+            if (i == 0 || name[i - 1] == ' ') {
+                name[i] = toupper(name[i]);
+            } else {
+                name[i] = tolower(name[i]); 
+            }
+        }
+
         cout << "Enter DOB (DD/MM/YYYY): ";
         getline(cin, dob);
 
@@ -210,6 +221,7 @@ int main() {
         case 0:
             delete[] students;
             cout << "Exiting program. Goodbye!\n";
+            cout << "\n<--------------------------------->\n";
             return 0;
 
         default:
@@ -217,4 +229,6 @@ int main() {
         }
     }
 }
-```cpp
+
+
+
